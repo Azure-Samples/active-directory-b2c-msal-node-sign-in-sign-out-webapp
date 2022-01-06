@@ -1,0 +1,23 @@
+{
+  "name": "tutorial-login-logout-msal",
+  "version": "1.0.0",
+  "description": "B2C msal node app allowing end users to sign in, sign out, update profile, and change password",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "msal",
+    "Azure AD B2C",
+    "node"
+  ],
+  "author": "Microsoft",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/msal-node": "^1.3.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.1",
+    "express-session": "^1.17.2"
+  }
+}

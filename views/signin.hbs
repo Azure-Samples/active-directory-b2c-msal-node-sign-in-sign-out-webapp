@@ -1,0 +1,17 @@
+<div class="col-md-3" style="margin:auto">
+  <div class="card text-center">
+    <div class="card-body">
+      {{#if showSignInButton}}
+          <h5 class="card-title">Please sign-in to acquire an ID token</h5>
+      {{else}}
+           <h5 class="card-title">You have signed in</h5>
+      {{/if}}
+    </div>
+
+    <div class="card-body">
+      {{#if message}}
+          <h5 class="card-title text-danger">{{message}}</h5>
+      {{/if}}
+    </div>
+  </div>
+</div>

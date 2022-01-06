@@ -1,57 +1,60 @@
-# Project Name
+# Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app
 
-(short, 1-3 sentenced, description of the project)
+This sample web app uses Azure Active Directory B2C (Azure AD B2C) user flows and the [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-node) (msal-node) to enable users use their local accounts to:
 
-## Features
+- Sign in
+- Sign out
+- Update a profile
+- Reset a password
+- Optional: allow users to authenticate by using their Google account.
 
-This project framework provides the following features:
+Follow the steps in [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to:
 
-* Feature 1
-* Feature 2
-* ...
+- Register the application in the Azure portal.
+- Create user flows for the app in the Azure portal.
+- Create a node web app project that uses the [Handlebars view template engine](https://handlebarsjs.com/).
+- Install the MSAL-node library and other necessary node packages.
+- Add code for user sign-in, sign-out, profile editing, and password reset.
+- Test the app.
 
 ## Getting Started
 
 ### Prerequisites
 
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
+- [Node.js](https://nodejs.org/).
+- [Visual Studio Code](https://code.visualstudio.com/download) or another code editor.
 
 ### Quickstart
-(Add steps to get up and running quickly)
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+1. From your shell or command line, run the following command to clone the repository:
 
+    ```powershell
+    git clone https://github.com/Azure-Samples/active-directory-b2c-msal-node-sign-in-sign-out-webapp.git
+    ``` 
+    > [warning]
+    > Given that the name of the sample is quite long, and so are the names of the referenced packages, you might want to clone it in a folder close to the root of your hard drive, to avoid maximum file path length limitations on Windows Operating System.
+1. From your shell or command line, run the following command to install project dependencies:
+    
+    ```powershell
+    cd active-directory-b2c-msal-node-sign-in-sign-out-webapp
+    npm install
+    ```
+
+1. From your shell or command line, run the following command to start your web app:
+
+    ```powershell
+    node index.js
+    ```
+
+1. In your browser, go to `http://localhost:3000` to access the web app. 
+
+> [NOTE]
+> This sample comes with a pre-registered application and user flows for testing purposes. If you would like to use your own Azure AD B2C tenant, application, user flows, follow [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to register and configure them in the Azure Portal.
 
 ## Demo
 
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
+Learn [how to test your node web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#test-your-web-app)
 
 ## Resources
 
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+Use [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to understand this app sample better.
