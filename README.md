@@ -49,7 +49,7 @@ Follow the steps in [Tutorial: Sign in and sign out users with Azure AD B2C in a
 1. In your browser, go to `http://localhost:3000` to access the web app. 
 
 > [NOTE]
-> This sample comes with a pre-registered application and user flows for testing purposes. If you would like to use your own Azure AD B2C tenant, application, user flows, follow [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to register and configure them in the Azure Portal.
+> This sample comes with a pre-registered application and user flows for testing purposes. If you would like to use your own Azure AD B2C tenant, application, user flows, follow [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to register and configure them in the Azure Portal. Besides, you should ignore the `.env` file because it has information that changes from one environment to another.
 
 ## Demo
 
