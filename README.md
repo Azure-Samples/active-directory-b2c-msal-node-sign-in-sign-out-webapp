@@ -18,7 +18,7 @@ This sample web app uses Azure Active Directory B2C (Azure AD B2C) user flows an
 - Sign out
 - Update a profile
 - Reset a password
-- Optional: allow users to authenticate by using their Google account.
+- Optional: allow users to authenticate using their Google account.
 
 Follow the steps in [Tutorial: Sign in and sign out users with Azure AD B2C in a Node.js web app](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-authenticate-nodejs-web-app-msal#create-azure-ad-b2c-user-flows) to:
 
