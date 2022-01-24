@@ -2,12 +2,13 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License.
  */
+ //<ms_docref_use_app_dependencies>
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const {engine}  = require('express-handlebars');
 const msal = require('@azure/msal-node');
-
+//</ms_docref_use_app_dependencies>
 
 
 /**
