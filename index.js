@@ -10,7 +10,7 @@ const {engine}  = require('express-handlebars');
 const msal = require('@azure/msal-node');
 //</ms_docref_use_app_dependencies>
 
-//<ms_docref_configure-msal>
+//<ms_docref_configure_msal>
 /**
  * Confidential Client Application Configuration
  */
@@ -36,7 +36,7 @@ const msal = require('@azure/msal-node');
 
 // Initialize MSAL Node
 const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
-//</ms_docref_configure-msal>
+//</ms_docref_configure_msal>
 
 //<ms_docref_global_variable>
 /**
