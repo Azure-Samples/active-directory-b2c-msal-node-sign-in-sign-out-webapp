@@ -10,7 +10,7 @@ const {engine}  = require('express-handlebars');
 const msal = require('@azure/msal-node');
 //</ms_docref_use_app_dependencies>
 
-
+//<ms_docref_configure-msal>
 /**
  * Confidential Client Application Configuration
  */
@@ -36,7 +36,7 @@ const msal = require('@azure/msal-node');
 
 // Initialize MSAL Node
 const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
-
+//<//ms_docref_configure-msal>
 /**
  * The MSAL.js library allows you to pass your custom state as state parameter in the Request object
  * By default, MSAL.js passes a randomly generated unique state parameter value in the authentication requests.
@@ -45,6 +45,8 @@ const confidentialClientApplication = new msal.ConfidentialClientApplication(con
  * For more information, visit: https://docs.microsoft.com/azure/active-directory/develop/msal-js-pass-custom-state-authentication-request
  * In this scenario, the states also serve to show the action that was requested of B2C since only one redirect URL is possible. 
  */
+
+//<ms_docref_global_variable>
 const APP_STATES = {
     LOGIN: 'login',
     LOGOUT: 'logout',
@@ -79,9 +81,10 @@ const tokenRequest = {
     }
 }
 
+//</ms_docref_global_variable>
 
-
-
+//<ms_docref_view_tepmplate_engine>
+ 
 //Create an express instance
 const app = express();
 
@@ -90,12 +93,12 @@ app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.set("views", "./views");
 
+//usse session configuration 
 app.use(session(sessionConfig));
 
-app.get('/', (req, res) => {
-    res.render('signin', { showSignInButton: true });
-});
+//</ms_docref_view_tepmplate_engine>
 
+//<ms_docref_authorization_code_url>
 
 /**
  * This method is used to generate an auth code request
@@ -126,6 +129,14 @@ app.get('/', (req, res) => {
             res.status(500).send(error);
         });
 }
+ 
+ //</ms_docref_authorization_code_url>
+
+ 
+ //<ms_docref_app_endpoints>
+ app.get('/', (req, res) => {
+    res.render('signin', { showSignInButton: true });
+});
 
 app.get('/signin',(req, res)=>{
         //Initiate a Auth Code Flow >> for sign in
@@ -206,7 +217,10 @@ app.get('/redirect',(req, res)=>{
 
 });
 
+ //</ms_docref_app_endpoints>
 //start app server to listen on set port
+ //<ms_docref_start_node_server>
 app.listen(process.env.SERVER_PORT, () => {
     console.log(`Msal Node Auth Code Sample app listening on port !` + process.env.SERVER_PORT);
 });
+//</ms_docref_start_node_server>
