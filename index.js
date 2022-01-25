@@ -37,6 +37,8 @@ const msal = require('@azure/msal-node');
 // Initialize MSAL Node
 const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
 //</ms_docref_configure-msal>
+
+//<ms_docref_global_variable>
 /**
  * The MSAL.js library allows you to pass your custom state as state parameter in the Request object
  * By default, MSAL.js passes a randomly generated unique state parameter value in the authentication requests.
@@ -46,7 +48,6 @@ const confidentialClientApplication = new msal.ConfidentialClientApplication(con
  * In this scenario, the states also serve to show the action that was requested of B2C since only one redirect URL is possible. 
  */
 
-//<ms_docref_global_variable>
 const APP_STATES = {
     LOGIN: 'login',
     LOGOUT: 'logout',
