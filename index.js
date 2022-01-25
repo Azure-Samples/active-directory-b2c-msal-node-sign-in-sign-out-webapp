@@ -36,7 +36,7 @@ const msal = require('@azure/msal-node');
 
 // Initialize MSAL Node
 const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
-//<//ms_docref_configure-msal>
+//</ms_docref_configure-msal>
 /**
  * The MSAL.js library allows you to pass your custom state as state parameter in the Request object
  * By default, MSAL.js passes a randomly generated unique state parameter value in the authentication requests.
