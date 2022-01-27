@@ -42,8 +42,8 @@ const confidentialClientApplication = new msal.ConfidentialClientApplication(con
 //<ms_docref_api_config>
 const apiConfig = {
     webApiScopes: [`https://${process.env.TENANT_NAME}.onmicrosoft.com/tasks-api/tasks.read`],
-    anonymous: 'http://localhost:5000/public',
-    protected: 'http://localhost:5000/hello'
+    anonymousUri: 'http://localhost:5000/public',
+    protectedUri: 'http://localhost:5000/hello'
 };
 //</ms_docref_api_config>
 
@@ -165,7 +165,7 @@ app.get('/api', async (req, res) => {
     if(!req.session.accessToken){
         //User is not logged in and so they can only call the anonymous API
         try {
-            const response = await axios.get(apiConfig.anonymous);
+            const response = await axios.get(apiConfig.anonymousUri);
             console.log('API response' + response.data); 
             res.render('api',{data: JSON.stringify(response.data), showSignInButton: true, bg_color:'warning'});
         } catch (error) {
@@ -184,7 +184,7 @@ app.get('/api', async (req, res) => {
         };
 
         try {
-            const response = await axios.get(apiConfig.protected, options);
+            const response = await axios.get(apiConfig.protectedUri, options);
             console.log('API response' + response.data); 
             res.render('api',{data: JSON.stringify(response.data), showSignInButton: false, bg_color:'success', givenName: req.session.givenName});
         } catch (error) {
