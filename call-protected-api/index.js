@@ -7,7 +7,10 @@ const express = require('express');
 const session = require('express-session');
 const {engine}  = require('express-handlebars');
 const msal = require('@azure/msal-node');
+//Use axios to make http calls 
 const axios = require('axios');
+
+//<ms_docref_configure_msal>
 /**
  * Confidential Client Application Configuration
  */
@@ -31,12 +34,18 @@ const axios = require('axios');
     }
 };
 
+// Initialize MSAL Node
+const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
+//</ms_docref_configure_msal>
 // Current web API coordinates were pre-registered in a B2C tenant.
+
+//<ms_docref_api_config>
 const apiConfig = {
     webApiScopes: [`https://${process.env.TENANT_NAME}.onmicrosoft.com/tasks-api/tasks.read`],
     anonymous: 'http://localhost:5000/public',
     protected: 'http://localhost:5000/hello'
 };
+//</ms_docref_api_config>
 
 /**
  * The MSAL.js library allows you to pass your custom state as state parameter in the Request object
@@ -64,9 +73,6 @@ const tokenRequest = {
     redirectUri: confidentialClientConfig.auth.redirectUri,
 };
 
-
-// Initialize MSAL Node
-const confidentialClientApplication = new msal.ConfidentialClientApplication(confidentialClientConfig);
 
 /**
  * Using express-session middleware. Be sure to familiarize yourself with available options
