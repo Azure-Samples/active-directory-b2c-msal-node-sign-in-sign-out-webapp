@@ -161,6 +161,7 @@ app.get('/redirect',(req, res)=>{
     }
 });
 
+//<ms_docref_api_express_route>
 app.get('/api', async (req, res) => {
     if(!req.session.accessToken){
         //User is not logged in and so they can only call the anonymous API
@@ -193,6 +194,8 @@ app.get('/api', async (req, res) => {
         }
     }     
 });
+
+//</ms_docref_api_express_route>
 
 /**
  * Sign out end point
