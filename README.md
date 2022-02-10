@@ -20,6 +20,6 @@ This sample web app uses Azure Active Directory B2C (Azure AD B2C) user flows an
 
 - Follow the steps in [Enable authentication in your own Node web application using Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/enable-authentication-in-node-web-app) to learn how to add Azure AD B2C authentication in your own Node.js web application.
 
-- Follow the steps in [Configure authentication in a sample Node.js web API by using Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/configure-authentication-in-sample-node-web-api) to learn how to configure a sample Node.js web application to call a sample Node.js web API, which is protected by Azure AD B2C.
+- Follow the steps in [Configure authentication in a sample Node.js web API by using Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/configure-authentication-in-sample-node-web-app-with-api) to learn how to configure a sample Node.js web application to call a sample Node.js web API, which is protected by Azure AD B2C.
 
-- Follow the steps in [Enable authentication in your own Node.js web API by using Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/enable-authentication-in-node-web-api) to learn how to how to create your own web app that calls your own web API that's protected by Azure AD B2C.
+- Follow the steps in [Enable authentication in your own Node.js web API by using Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/enable-authentication-in-node-web-app-with-api) to learn how to how to create your own web app that calls your own web API that's protected by Azure AD B2C.
