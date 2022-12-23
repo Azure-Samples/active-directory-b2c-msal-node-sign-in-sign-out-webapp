@@ -201,7 +201,7 @@ app.get('/api', async (req, res) => {
  * Sign out end point
 */
 app.get('/signout',async (req, res)=>{    
-    logoutUri = process.env.LOGOUT_ENDPOINT;
+    let logoutUri = process.env.LOGOUT_ENDPOINT;
     req.session.destroy(() => {
         res.redirect(logoutUri);
     });
